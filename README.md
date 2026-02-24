@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Hostel Management System
 
 A comprehensive full-stack hostel management system built with React frontend, .NET 8 Web API backend, and MySQL database.
@@ -229,3 +230,7 @@ This project is for educational purposes.
 
 
 
+=======
+# hostelmanagementsystem
+This Hostel Management project was developed by Front -End React Js and the Back-End is .NET web api and the Database is Mysql Workbench
+>>>>>>> c651bd1591dcafdf200cccf9b3324eca49b580dd
