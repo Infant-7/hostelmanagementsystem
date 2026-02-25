@@ -7,7 +7,7 @@ using System.Text;
 using HostelManagement.API.Data;
 using HostelManagement.API.Models;
 
-var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+
 builder.WebHost.UseUrls($"http://0.0.0.0:{port}");
 
 var builder = WebApplication.CreateBuilder(args);
@@ -103,7 +103,7 @@ app.UseSwaggerUI();
 
 app.UseCors("AllowReactApp");
 
-app.UseAuthentication();
+app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();
