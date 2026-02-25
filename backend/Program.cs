@@ -94,11 +94,8 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
 // HTTPS redirection is disabled for development (HTTP only)
 // Uncomment the line below if you want to enable HTTPS
@@ -169,4 +166,5 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-app.Run();
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Run($"http://0.0.0.0:{port}");
